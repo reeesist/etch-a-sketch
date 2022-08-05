@@ -1,2 +1,18 @@
-const container = document.querySelector('body');
+const container = document.getElementById('container')
 
+function makeTable() {
+    
+    for(let rowIndex = 0; rowIndex < 16; rowIndex++) {
+        let div = document.createElement('div');
+
+        for(let columnIndex = 0; columnIndex < 16; columnIndex++) {
+            let div1 = document.createElement('div');
+            div1.textContent = "abu";
+            div.appendChild(div1)
+        }
+
+        container.appendChild(div);
+    }
+}
+
+makeTable()
