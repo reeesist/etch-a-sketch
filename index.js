@@ -4,15 +4,18 @@ function makeTable() {
     
     for(let rowIndex = 0; rowIndex < 16; rowIndex++) {
         let div = document.createElement('div');
-
+       
         for(let columnIndex = 0; columnIndex < 16; columnIndex++) {
             let div1 = document.createElement('div');
-            div1.textContent = "abu";
             div.appendChild(div1)
+            div1.classList.add('col');
         }
-
+        
         container.appendChild(div);
+        div.classList.add('col');
     }
 }
 
+
 makeTable()
+
