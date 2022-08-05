@@ -12,7 +12,7 @@ function makeTable() {
         }
         
         container.appendChild(div);
-        div.classList.add('col');
+        div.classList.add('col', 'col1');
     }
 }
 

@@ -1,9 +1,10 @@
 .col {
-    border:1px;
+    /* border:1px;
     border-color: rgb(19, 3, 5);
-    border-style: solid;
+    border-style: solid; */
     height: 30px;
     width: 30px;
+    outline: 1px solid;
 }
 
 #container {
