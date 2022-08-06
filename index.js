@@ -18,4 +18,8 @@ function makeTable() {
 
 
 makeTable()
+let divs = document.querySelectorAll('.col');
 
+divs.forEach(divss => divss.addEventListener('mouseenter', function (e) {
+    e.target.style.backgroundColor = 'red'
+} ))
