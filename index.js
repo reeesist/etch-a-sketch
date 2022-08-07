@@ -1,14 +1,30 @@
-let container = document.querySelector('#container')
-container.style.gridTemplateColumns = `repeat(16, 1fr)`;
-container.style.gridTemplate.Rows = `repeat(16, 1fr)`;
-
-for(i = 0; i<256; i++) {
-    let square = document.createElement('div');
-    square.classList.add('square')
-    container.insertAdjacentElement("beforeend", square);
-}
+function makeTable(box) {
+    let container = document.querySelector('#container')
+    container.style.gridTemplateColumns = `repeat(${box}, 1fr)`;
+    container.style.gridTemplate.Rows = `repeat(${box}, 1fr)`;
+    
+    amount = box * box
+    for(i = 0; i<amount; i++) {
+        let square = document.createElement('div');
+        square.addEventListener('mouseover', coloring)
+        square.classList.add('square')
+        container.insertAdjacentElement("beforeend", square);
+}}
 
 divs = document.querySelectorAll('.square');
-divs.forEach(divss => divss.addEventListener('mouseenter', function (e) {
-    e.target.style.backgroundColor = 'blue';
-} ))
+
+
+function coloring() {
+    this.style.backgroundColor = 'black'
+}
+
+makeTable(16)
+
+function askSize() {
+    size = prompt('Enter size of a square')
+    box = size;
+    makeTable(box);
+}
+
+let btn = document.querySelector('button');
+btn.addEventListener('click', askSize)
