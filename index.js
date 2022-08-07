@@ -1,5 +1,7 @@
 function makeTable(box) {
     let container = document.querySelector('#container')
+    divs = document.querySelectorAll('.square');
+    divs.forEach((div) => div.remove());
     container.style.gridTemplateColumns = `repeat(${box}, 1fr)`;
     container.style.gridTemplate.Rows = `repeat(${box}, 1fr)`;
     
@@ -11,7 +13,8 @@ function makeTable(box) {
         container.insertAdjacentElement("beforeend", square);
 }}
 
-divs = document.querySelectorAll('.square');
+
+
 
 
 function coloring() {
